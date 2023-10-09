@@ -94,7 +94,6 @@ class Graphe:
 
     def preuveColoriage(self, i, j, mise_en_gage_i, mise_en_gage_j):
         # Vérifiez que les couleurs des nœuds i et j sont différentes
-
         if self.couleurs[i] == self.couleurs[j]:
             print("Les couleurs des nœuds i et j sont les mêmes.")
             return False
@@ -127,12 +126,12 @@ if __name__ == "__main__":
         print("Le graphe n'est pas 3-coloriable.")
     
     # Affiche la matrice d'adjacence et les couleurs
-    print("Matrice d'adjacence:")
-    for ligne in graphe.matrice_adjacence:
-        print(ligne)
+    # print("Matrice d'adjacence:")
+    # for ligne in graphe.matrice_adjacence:
+        # print(ligne)
     
-    print("Couleurs:")
-    print(graphe.couleurs)
+    # print("Couleurs:")
+    # print(graphe.couleurs)
     
     # Dessine le graphe en forme de rond et sauvegarde en PNG
     graphe.dessinerGraphe(nom_fichier="graphe.png")
@@ -142,7 +141,7 @@ if __name__ == "__main__":
 
     # Calcule les valeurs de mise en gage des couleurs
     mises_en_gage = graphe.miseEnGageColoriage(valeurs_aleatoires)
-    print(mises_en_gage)
+    # print(mises_en_gage)
     print("Mises en gage des couleurs:")
     for i, mise_en_gage in enumerate(mises_en_gage):
         print(f"Nœud {i+1}: {mise_en_gage}")
@@ -157,7 +156,7 @@ if __name__ == "__main__":
         mise_en_gage_i = mises_en_gage[i]
         mise_en_gage_j = mises_en_gage[j]
 
-        if graphe.preuveColoriage(i, j, mise_en_gage_i, mise_en_gage_j):
+        if graphe.preuveColoriage(i, j, mise_en_gage_i, mise_en_gage_j, valeurs_aleatoires):
             reussites += 1
 
     print(reussites)
