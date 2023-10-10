@@ -114,7 +114,7 @@ class Graphe:
         print("Hashage_i_verifieur : "+str(h_ri_ci.hex()))
         print("Hashage_j_verifieur : "+str(h_rj_cj.hex()))
 
-        # Vérifiez si h(ri || ci) = yi et h(rj || cj) = yjmain.py
+        # Vérifiez si h(ri || ci) = yi et h(rj || cj) = yj
         if (h_ri_ci.hex() == mise_en_gage_i) and (h_rj_cj.hex() == mise_en_gage_j):
             return True
         else:
