@@ -188,16 +188,15 @@ if __name__ == "__main__":
     # Répétez le protocole de preuve 400 fois
     nombre_de_tests = 400
     reussites = 0
+    a=0
 
-
-
-
-    for _ in range(nombre_de_tests):
+    while(a<nombre_de_tests):
         i, j = random.sample(range(graphe.nombre_de_noeuds), 2)
+        if (graphe.matrice_adjacence[i][j] == True):
 
-        if graphe.matrice_adjacence[i][j]:
-            
-            #print(mises_en_gage[i])
+            print("Arrete entre "+str(i)+" et "+str(j))
+
+            a=a+1
             mise_en_gage_i = mises_en_gage[i]
             mise_en_gage_j = mises_en_gage[j]
 
@@ -209,14 +208,9 @@ if __name__ == "__main__":
                 print("reussites : "+str(reussites))
             else : 
                 print("Echec")
-
-            
-        
         else:
-            reussites += 1
-
-    print(reussites)
-    # Vérifiez si l'utilisateur est authentifié
+            print("Pas d'arrete entre "+str(i)+" et "+str(j))
+            
     print("Nombre de tests réussis:", reussites)
     print("Nombre de tests:", nombre_de_tests)
     if reussites == nombre_de_tests:
