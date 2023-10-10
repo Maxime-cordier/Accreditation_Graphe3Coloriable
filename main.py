@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import hashlib
 
+NOMBRE_NOEUD = 20
+
 class Graphe:
     def __init__(self, nombre_de_noeuds):
         self.nombre_de_noeuds = nombre_de_noeuds
@@ -126,7 +128,7 @@ class Graphe:
 if __name__ == "__main__":
     
     # Créez un graphe avec 10 nœuds
-    graphe = Graphe(8)
+    graphe = Graphe(NOMBRE_NOEUD)
 
     # Génère un graphe 3-coloriable
     graphe.generer_graphe_3_coloriable()
@@ -176,7 +178,7 @@ if __name__ == "__main__":
     graphe.dessinerGraphe(nom_fichier="graphe_permute.png")
 
     # Génère des valeurs aléatoires de 128 bits pour la mise en gage
-    valeurs_aleatoires = [random.randint(0, 2**128 - 1) for _ in range(10)]
+    valeurs_aleatoires = [random.randint(0, 2**128 - 1) for _ in range(graphe.nombre_de_noeuds)]
 
     # Calcule les valeurs de mise en gage des couleurs
     mises_en_gage = graphe.miseEnGageColoriage(valeurs_aleatoires)
