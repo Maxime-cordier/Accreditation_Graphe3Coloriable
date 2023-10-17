@@ -39,5 +39,7 @@ python main.py
 Le programme contient une classe Graphe qui est responsable de la création et de la gestion du graphe. Elle contient plusieurs méthodes, y compris pour générer le graphe, pour vérifier s'il est 3-coloriable, pour dessiner le graphe et pour exécuter le protocole de preuve.
 
 ## Auteurs
+
 [Maxime CORDIER](https://github.com/Maxime-cordier)
+
 [Sylvain MESTRE](https://github.com/Shult)
