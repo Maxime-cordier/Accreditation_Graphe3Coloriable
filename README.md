@@ -40,6 +40,5 @@ Le programme contient une classe Graphe qui est responsable de la création et d
 
 ## Auteurs
 
-[Maxime CORDIER](https://github.com/Maxime-cordier)
-
-[Sylvain MESTRE](https://github.com/Shult)
+- [Maxime CORDIER](https://github.com/Maxime-cordier)
+- [Sylvain MESTRE](https://github.com/Shult)
